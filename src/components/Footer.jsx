@@ -84,12 +84,12 @@ const Footer = () => {
             <h4 className="footer-heading">Get In Touch</h4>
             <ul className="contact-list">
               <li>
-                <a href="mailto:hello@example.com">hello@example.com</a>
+                <a href="mailto:hello@example.com">naveenkannabiran@gmail.com</a>
               </li>
               <li>
-                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                <a href="tel:+15551234567">+91 7299226373</a>
               </li>
-              <li>San Francisco, CA</li>
+              <li>India, Chennai</li>
             </ul>
           </div>
         </div>
