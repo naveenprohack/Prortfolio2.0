@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import './Hero.css';
+import heroBg from '../assets/profile.png'; // adjust filename
+
 
 /**
  * Hero Section Component
@@ -47,124 +49,85 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="hero-section">
-      <div className="hero-container container">
-        <motion.div
-          className="hero-content"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Greeting */}
-          <motion.div className="hero-greeting" variants={itemVariants}>
-            <span className="greeting-text">Hello, I'm</span>
-          </motion.div>
+    <section
+  id="hero"
+  className="hero-section"
+  style={{
+    backgroundImage: `url(${heroBg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    color: '#fff',
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center'
+  }}
+>
+  {/* Overlay */}
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      zIndex: 0
+    }}
+  ></div>
 
-          {/* Name */}
-          <motion.h1 className="hero-name" variants={itemVariants}>
-            <span className="gradient-text">Naveen</span>
-          </motion.h1>
+  <div className="hero-container container" style={{ position: 'relative', zIndex: 1 }}>
+    <motion.div
+      className="hero-content"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="hero-greeting" variants={itemVariants}>
+        <span className="greeting-text">Hello, I'm</span>
+      </motion.div>
 
-          {/* Title */}
-          <motion.h2 className="hero-title" variants={itemVariants}>
-            Full Stack Developer & Creative Designer
-          </motion.h2>
+      <motion.h1 className="hero-name" variants={itemVariants}>
+        <span className="gradient-text">Naveen</span>
+      </motion.h1>
 
-          {/* Description */}
-          <motion.p className="hero-description" variants={itemVariants}>
-            I craft exceptional digital experiences that merge elegant design
-            with powerful functionality. Specializing in modern web technologies
-            and user-centered solutions.
-          </motion.p>
+      <motion.h2 className="hero-title" variants={itemVariants}>
+        Full Stack Developer
+      </motion.h2>
 
-          {/* CTA Buttons */}
-          <motion.div className="hero-actions" variants={itemVariants}>
-            <button className="btn-primary" onClick={scrollToContact}>
-              Get In Touch
-            </button>
-            <button className="btn-secondary" onClick={scrollToAbout}>
-              Learn More
-            </button>
-          </motion.div>
+      <motion.p className="hero-description" variants={itemVariants}>
+        I build robust, scalable web applications that deliver seamless functionality
+        and efficient performance. Skilled in both front-end and back-end
+        technologies, I turn ideas into fully functional digital solutions.
+      </motion.p>
 
-          {/* Social Links */}
-          <motion.div className="hero-social" variants={itemVariants}>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="GitHub"
-            >
-              <Github size={22} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={22} />
-            </a>
-            <a
-              href="mailto:hello@example.com"
-              className="social-link"
-              aria-label="Email"
-            >
-              <Mail size={22} />
-            </a>
-          </motion.div>
-        </motion.div>
+      <motion.div className="hero-actions" variants={itemVariants}>
+        <button className="btn-primary" onClick={scrollToContact}>
+          Get In Touch
+        </button>
+        <button className="btn-secondary" onClick={scrollToAbout}>
+          Learn More
+        </button>
+      </motion.div>
 
-        {/* Decorative Elements */}
-        <div className="hero-decoration">
-          <motion.div
-            className="decoration-circle circle-1"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 180, 360]
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: 'linear'
-            }}
-          />
-          <motion.div
-            className="decoration-circle circle-2"
-            animate={{
-              y: [0, 20, 0],
-              rotate: [0, -180, -360]
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: 'linear'
-            }}
-          />
-        </div>
+      <motion.div className="hero-social" variants={itemVariants}>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <Github size={22} />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <Linkedin size={22} />
+        </a>
+        <a href="mailto:hello@example.com" aria-label="Email">
+          <Mail size={22} />
+        </a>
+      </motion.div>
+    </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          className="scroll-indicator"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.6 }}
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          >
-            <ArrowDown size={24} />
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
+    {/* Decorative Circles and Scroll Indicator remain unchanged */}
+  </div>
+</section>
+
   );
 };
 

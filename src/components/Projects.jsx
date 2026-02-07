@@ -2,6 +2,12 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, X } from 'lucide-react';
 import './Projects.css';
+import namePageImg from '../assets/namepage.png';
+import memorialImg from '../assets/memorial.png';
+import schoolImg from '../assets/schoolkitify.png';
+import litsImg from '../assets/lits.png';
+import admin from '../assets/adminView.png';
+import yoga from '../assets/yoga.png';
 
 /**
  * Projects Section Component
@@ -13,33 +19,51 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    // {
+    //   id: 1,
+    //   title: 'E-Commerce Platform',
+    //   category: 'Full Stack',
+    //   description: 'A modern e-commerce platform with real-time inventory management and payment integration.',
+    //   fullDescription: 'Built a comprehensive e-commerce solution featuring real-time inventory tracking, secure payment processing via Stripe, advanced search and filtering, user authentication with JWT, and an admin dashboard for analytics. The platform handles thousands of products with optimized performance.',
+    //   image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+    //   technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+    //   liveUrl: 'https://example.com',
+    //   githubUrl: 'https://github.com',
+    //   highlights: [
+    //     'Real-time inventory synchronization',
+    //     'Secure payment processing with Stripe',
+    //     'Advanced search and filtering system',
+    //     'Responsive admin dashboard',
+    //     'Performance optimizations for large catalogs'
+    //   ]
+    // },
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Name.Page',
       category: 'Full Stack',
-      description: 'A modern e-commerce platform with real-time inventory management and payment integration.',
-      fullDescription: 'Built a comprehensive e-commerce solution featuring real-time inventory tracking, secure payment processing via Stripe, advanced search and filtering, user authentication with JWT, and an admin dashboard for analytics. The platform handles thousands of products with optimized performance.',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      description: 'A dynamic web application developed at Netaxis IT Solutions, delivering efficient and user-friendly digital solutions.',
+      fullDescription: 'Developed "Name.Page", a full-stack web application at Netaxis IT Solutions, emphasizing seamless functionality and scalability. Key features include secure user authentication, dynamic content management, REST API integrations, and performance optimizations to support multiple concurrent users. The project adheres to best coding practices, ensuring maintainable and high-quality code.',
+      image: namePageImg,
+      technologies: ['Angular', 'Laravel', 'PHP', 'MySQL', 'REST APIs','OAuth'],
+      liveUrl: 'https://name.page',
+      githubUrl: 'https://github.com', // Add GitHub URL if public
       highlights: [
-        'Real-time inventory synchronization',
-        'Secure payment processing with Stripe',
-        'Advanced search and filtering system',
-        'Responsive admin dashboard',
-        'Performance optimizations for large catalogs'
+        'Implemented secure user authentication with role-based access control',
+        'Built a dynamic content management system for admins and users',
+        'Optimized backend and database queries for high performance',
+        'Integrated third-party APIs to enhance functionality',
+        'Followed industry best practices for clean and maintainable code'
       ]
     },
     {
       id: 2,
-      title: 'Task Management App',
-      category: 'Frontend',
+      title: 'Memorial',
+      category: 'Full Stack',
       description: 'Collaborative task management tool with drag-and-drop functionality and team features.',
       fullDescription: 'Developed a feature-rich task management application with drag-and-drop kanban boards, real-time collaboration, team workspaces, deadline tracking, and customizable workflows. Implemented using React and Firebase for real-time data synchronization.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-      technologies: ['React', 'Firebase', 'Tailwind CSS', 'DnD Kit'],
-      liveUrl: 'https://example.com',
+      image: memorialImg,
+      technologies: ['React', 'Firebase', 'Tailwind CSS', 'DnD Kit','OAuth'],
+      liveUrl: 'https://memorial.website',
       githubUrl: 'https://github.com',
       highlights: [
         'Drag-and-drop kanban boards',
@@ -51,13 +75,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      category: 'Frontend',
+      title: 'Schoolkitify',
+      category: 'Full Stack',
       description: 'Beautiful weather application with location-based forecasts and interactive maps.',
       fullDescription: 'Created an elegant weather dashboard featuring accurate forecasts, interactive weather maps, air quality monitoring, and customizable location tracking. Integrated with multiple weather APIs for comprehensive data and built with performance in mind.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
+      image: schoolImg,
       technologies: ['React', 'OpenWeather API', 'Chart.js', 'Mapbox'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://schoolkitify.com',
       githubUrl: 'https://github.com',
       highlights: [
         '7-day weather forecasts',
@@ -69,13 +93,13 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Social Media Dashboard',
+      title: 'Lits',
       category: 'Full Stack',
       description: 'Analytics dashboard for tracking social media metrics across multiple platforms.',
       fullDescription: 'Built a comprehensive analytics dashboard that aggregates data from multiple social media platforms, providing insights through interactive charts, engagement metrics, audience demographics, and performance tracking. Features automated reporting and export capabilities.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-      technologies: ['Next.js', 'PostgreSQL', 'Chart.js', 'OAuth'],
-      liveUrl: 'https://example.com',
+      image: litsImg,
+      technologies: ['javaScript', 'PHP', 'MySql'],
+      liveUrl: 'https://litsedu.com',
       githubUrl: 'https://github.com',
       highlights: [
         'Multi-platform integration',
@@ -87,13 +111,13 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Portfolio Generator',
+      title: 'Admin panel',
       category: 'Full Stack',
       description: 'SaaS platform for developers to create and deploy professional portfolio websites.',
       fullDescription: 'Developed a SaaS application that enables developers to build and deploy professional portfolios without coding. Features customizable templates, drag-and-drop editor, custom domain support, and integrated analytics. Built with modern tech stack for optimal performance.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
+      image: admin,
       technologies: ['React', 'Node.js', 'AWS', 'MongoDB', 'Stripe'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://litsedu.com',
       githubUrl: 'https://github.com',
       highlights: [
         'Drag-and-drop website builder',
@@ -109,9 +133,9 @@ const Projects = () => {
       category: 'Mobile',
       description: 'Cross-platform mobile app for tracking workouts and nutrition goals.',
       fullDescription: 'Created a comprehensive fitness tracking application with workout planning, nutrition logging, progress tracking, and social features. Includes personalized workout recommendations, meal planning, and integration with wearable devices for automated tracking.',
-      image: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80',
+      image: yoga,
       technologies: ['React Native', 'Firebase', 'HealthKit', 'Redux'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://sivajiyogafoundation.org',
       githubUrl: 'https://github.com',
       highlights: [
         'Workout and nutrition tracking',

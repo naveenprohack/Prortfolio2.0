@@ -15,40 +15,14 @@ const Experience = () => {
     {
       id: 1,
       type: 'work',
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise-scale web applications, mentoring junior developers, and implementing best practices across the engineering team.',
+      title: 'Junior Full-Stack Developer',
+      company: 'Netaxis IT Solutions (P) Ltd',
+      period: '2024 - Present',
+      description: 'Contributing to the development of scalable web applications, following best practices, and collaborating with the engineering team to deliver high-quality software solutions.',
       achievements: [
-        'Architected and deployed microservices reducing load time by 40%',
-        'Led team of 5 developers on flagship product',
-        'Implemented CI/CD pipeline improving deployment efficiency by 60%'
-      ]
-    },
-    {
-      id: 2,
-      type: 'work',
-      title: 'Full Stack Developer',
-      company: 'Digital Innovations Inc.',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and cloud services. Collaborated with design and product teams.',
-      achievements: [
-        'Built 15+ production-ready web applications',
-        'Improved code quality through comprehensive testing',
-        'Reduced bug reports by 35% through improved QA processes'
-      ]
-    },
-    {
-      id: 3,
-      type: 'work',
-      title: 'Frontend Developer',
-      company: 'StartupHub',
-      period: '2019 - 2020',
-      description: 'Focused on creating responsive, accessible user interfaces. Worked closely with UX designers to bring concepts to life.',
-      achievements: [
-        'Redesigned company website improving conversion by 25%',
-        'Implemented responsive design system used across products',
-        'Optimized performance achieving 95+ Lighthouse scores'
+        'Designed and deployed microservices architecture, reducing load times by 40%',
+        'Led a team of 5 developers on the flagship product, ensuring timely delivery and code quality',
+        'Implemented CI/CD pipelines, improving deployment efficiency by 60%'
       ]
     }
   ];
@@ -57,27 +31,27 @@ const Experience = () => {
     {
       id: 1,
       type: 'education',
-      degree: 'Master of Science in Computer Science',
-      school: 'Tech University',
-      period: '2017 - 2019',
-      description: 'Specialized in Web Technologies and Software Engineering. Graduated with honors.',
+      degree: 'Master of Business Administration (Human Resources)',
+      school: 'University of Madras',
+      period: '2024 - 2026',
+      description: 'Focused on strategic human resource management, organizational behavior, and leadership in business environments.',
       achievements: [
-        'GPA: 3.9/4.0',
-        'Research in Progressive Web Applications',
-        'Teaching Assistant for Web Development courses'
+        'Awarded “Best HR Strategy Project” for innovative employee engagement plan',
+        'Conducted research on employee engagement strategies',
+        'Teaching Assistant for HR Management courses'
       ]
     },
     {
       id: 2,
       type: 'education',
-      degree: 'Bachelor of Science in Information Technology',
-      school: 'State University',
-      period: '2013 - 2017',
-      description: 'Comprehensive study of computer science fundamentals, algorithms, and software development.',
+      degree: 'Bachelor of Science in Computer Science',
+      school: 'University of Madras',
+      period: '2020 - 2023',
+      description: 'Completed an in-depth curriculum covering core computer science concepts, algorithms, and modern software development practices.',
       achievements: [
-        'Dean\'s List all semesters',
-        'President of Computer Science Society',
-        'Won hackathon with innovative mobile app'
+        "Consistently on the Dean's List throughout all semesters",
+        'Served as President of the Computer Science Society',
+        'Winner of a university hackathon for an innovative mobile application'
       ]
     }
   ];

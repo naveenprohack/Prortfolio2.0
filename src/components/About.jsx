@@ -71,24 +71,24 @@ const About = () => {
           <div className="about-content">
             <motion.div className="about-text" variants={itemVariants}>
               <p className="about-intro">
-                I'm a passionate developer and designer with over 5 years of experience
-                crafting digital solutions that make a difference. My journey in tech
-                began with a curiosity for how things work and evolved into a love for
-                creating experiences that are both beautiful and functional.
+                I'm a passionate Full-Stack Developer with over 2 years of experience building
+                robust and scalable web applications. My journey in tech started with a curiosity
+                for how things work and has grown into a dedication to creating efficient, 
+                high-quality digital solutions.
               </p>
 
               <p className="about-details">
-                When I'm not coding, you'll find me exploring new design trends,
-                contributing to open-source projects, or sharing knowledge with the
-                developer community. I believe in continuous learning and pushing the
-                boundaries of what's possible with modern web technologies.
+                I specialize in both front-end and back-end development, working with modern
+                technologies to deliver seamless functionality and optimized performance.
+                When I'm not coding, I enjoy contributing to open-source projects, exploring
+                new tools, and continuously improving my skills to stay ahead in the fast-paced
+                world of web development.
               </p>
 
               <p className="about-philosophy">
-                My approach combines technical expertise with creative problem-solving,
-                ensuring every project not only meets requirements but exceeds expectations.
-                I'm committed to writing clean, maintainable code and creating interfaces
-                that users love.
+                My approach emphasizes clean, maintainable code, effective problem-solving, and
+                building applications that exceed expectations. I thrive on turning ideas into
+                fully functional solutions that provide real value to users and businesses alike.
               </p>
             </motion.div>
 
