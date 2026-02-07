@@ -85,7 +85,7 @@ const Hero = () => {
       animate="visible"
     >
       <motion.div className="hero-greeting" variants={itemVariants}>
-        <span className="greeting-text">Hello, I'mmm</span>
+        <span className="greeting-text">Hello, I'm</span>
       </motion.div>
 
       <motion.h1 className="hero-name" variants={itemVariants}>
