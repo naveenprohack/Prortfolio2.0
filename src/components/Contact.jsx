@@ -110,19 +110,19 @@ const Contact = () => {
     {
       icon: <Mail size={24} />,
       label: 'Email',
-      value: 'hello@example.com',
-      link: 'mailto:hello@example.com'
+      value: 'naveenkannabiran@gmail.com',
+      link: 'naveenkannabiran@gmail.com'
     },
     {
       icon: <Phone size={24} />,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+01 7298118373',
+      link: '+01 7298118373'
     },
     {
       icon: <MapPin size={24} />,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Chennai, India',
       link: null
     }
   ];

@@ -195,7 +195,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                5+
+                2+
               </motion.span>
               <span className="stat-label">Years Experience</span>
             </div>
@@ -207,7 +207,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                50+
+                40+
               </motion.span>
               <span className="stat-label">Projects Completed</span>
             </div>
@@ -219,7 +219,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.4 }}
               >
-                20+
+                5+
               </motion.span>
               <span className="stat-label">Happy Clients</span>
             </div>
@@ -353,7 +353,7 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           className="scroll-indicator enhanced-scroll"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -372,7 +372,7 @@ const Hero = () => {
             <ArrowDown size={24} />
           </motion.div>
           <span className="scroll-text">Scroll to explore</span>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );
